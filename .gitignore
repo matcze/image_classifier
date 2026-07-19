@@ -1,3 +1,4 @@
 model_pytorch/data
 model_pytorch/models
+model_tensorflow/models
 __pycache__

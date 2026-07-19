@@ -76,10 +76,10 @@ The model uses a sequential block-based CNN architecture:
 ### 🏗️ Network Architecture (Replicated TinyVGG)
 
 
-
+ 
 ---
 
 ## 🔗 References & Learning Sources
-* [Daniel Bourke's TensorFlow Deep Learning Course](https://mrdbourke.com)
-* [Learn PyTorch for Deep Learning Curriculum](https://learnpytorch.io)
-* [CNN Explainer Interactive Visualizer](https://github.io)
+* [Daniel Bourke's TensorFlow Deep Learning Course](https://dev.mrdbourke.com/tensorflow-deep-learning/03_convolutional_neural_networks_in_tensorflow/#1-import-and-become-one-with-the-data_1)
+* [Learn PyTorch for Deep Learning Curriculum](https://www.learnpytorch.io/03_pytorch_computer_vision/)
+* [CNN Explainer Interactive Visualizer](https://poloclub.github.io/cnn-explainer/)

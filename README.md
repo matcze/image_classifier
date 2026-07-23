@@ -21,6 +21,7 @@ Both models are trained on the **Fashion-MNIST** benchmark dataset, natively loa
 * **Normalization:** Pixel values scaled to a `[0.0, 1.0]` range.
 * **Tensor Transformation:** Converted using `ToTensor()`, mapping shapes to `(Channel × Height × Width)` → `(1 × 28 × 28)`.
 
+
 ### 🏗️ Network Architecture (TinyVGG Variant)
 The model uses a sequential block-based CNN architecture:
 
@@ -77,6 +78,11 @@ The model uses a sequential block-based CNN architecture:
 
 
  
+
+
+
+
+
 ---
 
 ## 🔗 References & Learning Sources

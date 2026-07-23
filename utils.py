@@ -39,5 +39,3 @@ def plot_loss_curves(history):
     ax[1].grid(True)
 
     plt.tight_layout()
-
-

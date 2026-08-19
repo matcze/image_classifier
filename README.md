@@ -42,7 +42,7 @@ The model uses a sequential block-based CNN architecture:
 | | ReLU | Activation function | `(128)` |
 | | Linear | Input: 128, Output: 10 (Logits) | `(10)` |
 
-### ⚙️ Training Configurations
+### ⚙️ Training Configurations  
 * **Loss Function:** Cross-Entropy Loss (`nn.CrossEntropyLoss`)
 * **Optimizer:** Adam Optimizer
 * **Training Epochs:** 5

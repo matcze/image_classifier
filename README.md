@@ -76,11 +76,55 @@ The model uses a sequential block-based CNN architecture:
 
 ### 🏗️ Network Architecture (Replicated TinyVGG)
 
+| **Block**      | **Layer Type** | **Hyperparameters**                                     | **Output Shape** |
+| -------------- | -------------- | ------------------------------------------------------- | ---------------- |
+| **Input**      | Input          | 28 × 28 × 1                                             | `(28, 28, 1)`    |
+| **Block 1**    | Conv2D         | 32 filters, 3×3 kernel, stride 1, ReLU, padding: valid  | `(26, 26, 32)`   |
+|                | Conv2D         | 32 filters, 3×3 kernel, stride 1, ReLU, padding: valid  | `(24, 24, 32)`   |
+|                | MaxPooling2D   | 2×2 pool, stride 2                                      | `(12, 12, 32)`   |
+|                | Dropout        | Rate: 0.25                                              | `(12, 12, 32)`   |
+| **Block 2**    | Conv2D         | 128 filters, 3×3 kernel, stride 1, ReLU, padding: valid | `(10, 10, 128)`  |
+|                | Conv2D         | 128 filters, 3×3 kernel, stride 1, ReLU, padding: valid | `(8, 8, 128)`    |
+|                | MaxPooling2D   | 2×2 pool, stride 2                                      | `(4, 4, 128)`    |
+|                | Dropout        | Rate: 0.25                                              | `(4, 4, 128)`    |
+| **Classifier** | Flatten        | 128 × 4 × 4 = 2048 features                             | `(2048)`         |
+|                | Dense          | 128 units, ReLU                                         | `(128)`          |
+|                | Dropout        | Rate: 0.5                                               | `(128)`          |
+|                | Dense          | 10 units, Softmax                                       | `(10)`           |
+
+
+### ⚙️ Training Configurations
+| **Parameter**         | **Value**                        |
+| --------------------- | -------------------------------- |
+| **Optimizer**         | Adam                             |
+| **Loss Function**     | Sparse Categorical Cross-Entropy |
+| **Metric**            | Accuracy                         |
+| **Batch Size**        | 64                               |
+| **Epochs**            | 15                               |
+| **Input Size**        | 28 × 28 × 1                      |
+| **Number of Classes** | 10                               |
+| **Dropout Rates**     | 0.25, 0.25, 0.5                  |
+| **Output Activation** | Softmax                          |
 
  
+### 📈 Evaluation & Results
+* **Final Training Loss:** 0.3349
+* **Test Accuracy:** **91.02%**
 
+#### Class-wise Performance (Confusion Matrix Summary)
 
-
+| Class | Correct / Total | Accuracy (%) |
+| :--- | :---: | :---: |
+| **T-shirt/top** | 868 / 1000 | 86.8% |
+| **Trouser** | 984 / 1000 | 98.4% |
+| **Pullover** | 891 / 1000 | 89.1% |
+| **Dress** | 918 / 1000 | 91.8% |
+| **Coat** | 835 / 1000 | 83.5% |
+| **Sandal** | 984 / 1000 | 98.4% |
+| **Shirt** | 699 / 1000 | 69.9% |
+| **Sneaker** | 974 / 1000 | 97.4% |
+| **Bag** | 987 / 1000 | 98.7% |
+| **Ankle boot** | 946 / 1000 | 94.6% |
 
 
 ---

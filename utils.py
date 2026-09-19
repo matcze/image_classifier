@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+ 
 
 def plot_loss_curves(history):
     """

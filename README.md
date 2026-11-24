@@ -40,7 +40,7 @@ The model uses a sequential block-based CNN architecture:
 | | Conv2D | In: 64, Out: 64, Kernel: 3×3, Stride: 1, Padding: 1 | `(64, 14, 14)` |
 | | ReLU | Activation function | `(64, 14, 14)` |
 | | MaxPool2D | Kernel: 2×2, Stride: 2 | `(64, 7, 7)` |
-| | Dropout2d | Probability: 0,25 | `(64, 14, 14)` |
+| | Dropout2d | Probability: 0,25 | `(64, 7, 7)` |
 | **Classifier**| Flatten | Flattens spatial dimensions (64 × 7 × 7) | `(3136)` |
 | | Linear | Input: 3136, Output: 128 | `(128)` |
 | | ReLU | Activation function | `(128)` |
@@ -124,6 +124,28 @@ The model uses a sequential block-based CNN architecture:
 | **Bag** | 984 / 1000 | 98.4% |
 | **Ankle boot** | 953 / 1000 | 95.3% |
 
+
+## 🎯 Conclusion
+
+The main goal of this project was to demonstrate the implementation of CNN classification using two frameworks: PyTorch and TensorFlow.
+
+Both implementations achieved test accuracy above 90% on the Fashion-MNIST dataset, demonstrating the effectiveness of CNN-based architectures in recognizing clothing categories from grayscale images.
+
+The TensorFlow implementation achieved a slightly higher test accuracy of 90.77%, compared to 90.34% for PyTorch. However, since the models differ in architecture, preprocessing, data augmentation, and training duration, this comparison does not establish the superiority of one framework over the other.
+
+An interesting observation was the difficulty of classifying visually similar clothing categories. In particular, the Shirt class had the lowest classification accuracy in both implementations, highlighting the challenges associated with distinguishing apparel items with similar shapes and textures.
+
+Overall, this project provided practical experience in:
+
+Building and training CNN architectures from scratch.
+Implementing image preprocessing and data augmentation pipelines.
+Working with PyTorch and TensorFlow/Keras.
+Evaluating classification models using accuracy and confusion matrices.
+Comparing different model architectures and training configurations.
+
+The project also highlights opportunities for further improvement, including hyperparameter optimization, more systematic architecture comparisons, and techniques to improve classification performance on visually similar classes.
+
+Future work could explore deeper CNN architectures, batch normalization, learning rate scheduling, and more advanced augmentation strategies to improve model generalization and classification accuracy.
 
 ---
 

@@ -137,11 +137,11 @@ An interesting observation was the difficulty of classifying visually similar cl
 
 Overall, this project provided practical experience in:
 
-Building and training CNN architectures from scratch.
-Implementing image preprocessing and data augmentation pipelines.
-Working with PyTorch and TensorFlow/Keras.
-Evaluating classification models using accuracy and confusion matrices.
-Comparing different model architectures and training configurations.
+- Building and training CNN architectures from scratch.
+- Implementing image preprocessing and data augmentation pipelines.
+- Working with PyTorch and TensorFlow/Keras.
+- Evaluating classification models using accuracy and confusion matrices.
+- Comparing different model architectures and training configurations.
 
 The project also highlights opportunities for further improvement, including hyperparameter optimization, more systematic architecture comparisons, and techniques to improve classification performance on visually similar classes.
 
